@@ -17,5 +17,10 @@ class Interval:
             return False
         
     def overlaps_with(self, other):
-        if ():
-            
+        if self.is_empty() or other.is_empty():
+            return False
+        
+        if self.lower <= other.upper and self.upper >= other.lower:
+            return True
+        else: 
+            return False
